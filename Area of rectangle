@@ -1,0 +1,33 @@
+import math
+def display(area,n):
+    print("The area of the ",n,"th rectangle is: ",area,"Sq.Units")
+    
+def compute(x1,y1,x2,y2,x3,y3,n):
+    length=abs(math.sqrt(((x2-x1)^2) + ((y2-y1)^2)))
+    breadth=abs(math.sqrt(((x3-x1)^2) + ((y3-y1)^2)))
+    area=length*breadth
+    display(area,n)
+print("\t\t\t(x1,y1) ---------(x2,y2)")
+print("\t\t\t       |         |")
+print("\t\t\t       |         |")
+print("\t\t\t       |         |")
+print("\t\t\t(x3,y3) --------- ")
+n=int(input("Enter the number of rectangles\n"))
+for i in range(n):
+    print("Enter the x co-ordinate of first point of ",i+1,"th rectangle\n")
+    x1=int(input())
+    print("Enter the y co-ordinate of first point of ",i+1,"th rectangle\n")
+    y1=int(input())
+    print("Enter the x co-ordinate of second point of ",i+1,"th rectangle\n")
+    x2=int(input())
+    print("Enter the y co-ordinate of second point of ",i+1,"th rectangle\n")
+    y2=int(input())
+    print("Enter the x co-ordinate of third point of ",i+1,"th rectangle\n")
+    x3=int(input())
+    print("Enter the x co-ordinate of third point of ",i+1,"th rectangle\n")
+    y3=int(input())
+    compute(x1,y1,x2,y2,x3,y3,n)
+
+
+
+
