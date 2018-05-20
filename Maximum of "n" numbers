@@ -1,0 +1,30 @@
+#inbuilt function method
+n=int(input(print("Enter number of elements")))
+print("Enter ",n," numbers")
+a=[]
+for i in range(0,n):
+    m=int(input())
+    a.append(m)
+print("The maximum value is",max(a))
+
+#selection sort method
+def sort(n,a):
+    for i in range(n-1):
+        pos=i
+        for j in range(i+1,n):
+            if(a[pos]>a[j]):
+                pos=j
+        if(pos!=i):
+            temp=a[i]
+            a[i]=a[pos]
+            a[pos]=temp
+    print("\n",a[i+1])
+# Main()
+print("Enter the number of elements")
+n=int(input())
+print("Enter the elements")
+a=[]
+for i in range(n):
+    x=int(input())
+    a.append(x)
+sort(n,a)
