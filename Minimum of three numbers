@@ -1,0 +1,22 @@
+#By comparing manually
+def minimum(x,y,z):
+    if(x<y) and (x<z):
+        print("The minimum value is ",x)
+    elif(y<x) and (y<z):
+        print("The minimum value is ",y)
+    elif(z<x) and (z<y):
+        print("The minimum value is ",z)
+
+print("Enter three numbers")
+x=int(input())
+y=int(input())
+z=int(input())
+minimum(x,y,z)
+
+#By inbuilt function method
+a=[]
+print("Enter three values")
+for i in range(0,3):
+    m=int(input())
+    a.append(m)
+print("The minimum value is",min(a))
